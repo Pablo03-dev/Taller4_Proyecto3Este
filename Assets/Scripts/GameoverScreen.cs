@@ -1,38 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameoverScreen : MonoBehaviour
 {
     //public TMP_Text pointsText;
-    private bool JuegoPausado = false;
+    private bool juegoPausado = false;
+
+
+    private void Start()
+    {
+        juegoPausado = false;
+    }
 
     public void Setup(float time)
     {
         gameObject.SetActive(true);
         //pointsText.text = "Score: " + score.ToString();
 
-        JuegoPausado = true;
+        juegoPausado = true;
         Pausa();
     }
 
     public void Pausa()
     {
         Time.timeScale = 0f;
-        JuegoPausado = true;
+        juegoPausado = true;
     }
 
     public void RestartButton()
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1f;
-        JuegoPausado = false;
+        juegoPausado = false;
     }
 
-    public void ExittButton()
+    public void ExitButton()
     {
         SceneManager.LoadScene("MenuPrincipal");
         Time.timeScale = 1f;
