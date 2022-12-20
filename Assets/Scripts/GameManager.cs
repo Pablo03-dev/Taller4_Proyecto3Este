@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public float gameTime;
     private bool stopTimer;
+    public ConbinacionManager conbinacion;
+    public GameObject laCombi;
 
 
     //private int score;
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
     //    score = 0;
     //    UpdatedScore();
     }
+
+    
 
    public void GameOver()
     {

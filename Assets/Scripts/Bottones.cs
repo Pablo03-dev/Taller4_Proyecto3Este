@@ -29,6 +29,6 @@ public class Bottones : MonoBehaviour
 
     public void Sonido()
     {
-        Debug.Log("Me Presionaron");
+
     }
 }
