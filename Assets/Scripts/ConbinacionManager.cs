@@ -37,14 +37,14 @@ public class ConbinacionManager : MonoBehaviour
         cantidad = _cantidad;
     }
 
-    void ActivarSlot()
+    public void ActivarSlot()
     {
         for (int i = 0; i < cantidad; i++)
         {
             
             slots[i].gameObject.SetActive(true);
-            slot1.ActivarSlot();
         }
+        Gm.gameTime = 7f;
     }
 
     void DesactivarSlots()
@@ -77,7 +77,7 @@ public class ConbinacionManager : MonoBehaviour
     {
         if (_instrumento == secuencia[indiceSecuencia])
         {
-            
+
             slots[indiceSecuencia].ActivarSlot();
             indiceSecuencia++;
             if (indiceSecuencia == cantidad)
@@ -100,17 +100,16 @@ public class ConbinacionManager : MonoBehaviour
         // apagar los circulos
         GameManager.manager.completoSecuencia = true;
         print("Completo");
+        Gm.gameTime = 7f;
 
-        
-
-        indiceSecuencia = 0;
 
         secuencia.Clear();
-        DesactivarSlots();
+        indiceSecuencia = -1;
         ElegirCantidad(4);
         ElegirInstrumento();
         ElegirPublico();
-
+        DesactivarSlots();
+        
     }
 
     void ElegirPublico()
@@ -123,8 +122,6 @@ public class ConbinacionManager : MonoBehaviour
 
         if (_instrumentillo != secuencia[indiceSecuencia])
         {
-            indiceSecuencia = 0;
-
             secuencia.Clear();
         }
     }

@@ -14,18 +14,11 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     public float gameTime;
+    public float OriginTime;
     private bool stopTimer;
     public ConbinacionManager conbinacion;
     public GameObject laCombi;
 
-
-    //private int score;
-    //public Text scoreText;
-
-    //public float timer = 10;
-    //private bool juegoPausado = false;
-
-    public GameoverScreen GameOverScreen;
     public bool completoSecuencia;
 
     private void Awake()
@@ -40,29 +33,8 @@ public class GameManager : MonoBehaviour
    public void GameOver()
     {
         print("EndGame");
-        GameOverScreen.Setup(gameTime);
     }
 
-
-    public void WinGame()
-    {
-
-    }
-
-    public void ResetearJuego()
-    {
-
-    }
-
-    public void QuitarTiempo()
-    {
-
-        //if (time < 0)
-        //{
-        //    GameOver();
-        //}
-
-    }
 
     void UpdatedScore()
     {
@@ -78,6 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameTime = OriginTime;
         stopTimer = false;
         barraTime.maxValue = gameTime;
         barraTime.value = gameTime;
@@ -85,7 +58,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        float time = gameTime - Time.time;
+
+
+
+        float time = gameTime -= Time.deltaTime;
 
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time - minutes * 60f);
@@ -95,8 +71,12 @@ public class GameManager : MonoBehaviour
         if (time <= 0)
         {
             stopTimer = true;
-            GameOver();
 
+        }
+
+        if (gameTime >= 7)
+        {
+            gameTime = OriginTime;
         }
 
         if (stopTimer == false)
@@ -104,6 +84,16 @@ public class GameManager : MonoBehaviour
             timerText.text = textTime;
             barraTime.value = time;
         }
+
+        if (completoSecuencia == true)
+        {
+            gameTime += 7;
+            completoSecuencia = false;
+        }
+
+        
+
+
     }
 
 
