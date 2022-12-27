@@ -18,6 +18,10 @@ public class ConbinacionManager : MonoBehaviour
     public Publico publico;
     public GameManager Gm;
     public GameObject globo;
+    public Slot slot1;
+    public Slot slot2;
+    public Slot slot3;
+    public Slot slot4;
 
 
     private void Start()
@@ -37,7 +41,9 @@ public class ConbinacionManager : MonoBehaviour
     {
         for (int i = 0; i < cantidad; i++)
         {
+            
             slots[i].gameObject.SetActive(true);
+            slot1.ActivarSlot();
         }
     }
 
@@ -46,6 +52,11 @@ public class ConbinacionManager : MonoBehaviour
         for (int i = 0; i < cantidad; i++)
         {
             slots[i].gameObject.SetActive(false);
+            slot1.ResetearSlots();
+            slot2.ResetearSlots();
+            slot3.ResetearSlots();
+            slot4.ResetearSlots();
+
         }
 
         ActivarSlot();
@@ -90,14 +101,16 @@ public class ConbinacionManager : MonoBehaviour
         GameManager.manager.completoSecuencia = true;
         print("Completo");
 
+        
+
         indiceSecuencia = 0;
 
         secuencia.Clear();
         DesactivarSlots();
         ElegirCantidad(4);
-        ActivarSlot();
         ElegirInstrumento();
         ElegirPublico();
+
     }
 
     void ElegirPublico()
@@ -107,10 +120,12 @@ public class ConbinacionManager : MonoBehaviour
 
     public void SeEquivoco(int _instrumentillo)
     {
+
         if (_instrumentillo != secuencia[indiceSecuencia])
         {
-            ElegirCantidad(4);
-            Debug.Log("sus");
+            indiceSecuencia = 0;
+
+            secuencia.Clear();
         }
     }
 

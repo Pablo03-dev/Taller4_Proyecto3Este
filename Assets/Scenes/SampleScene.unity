@@ -845,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &268421262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1220,8 +1220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 583, y: -146}
-  m_SizeDelta: {x: 487.0919, y: 116.9968}
+  m_AnchoredPosition: {x: 452.4, y: -151.9}
+  m_SizeDelta: {x: 429.9, y: 97.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368688931
 MonoBehaviour:
@@ -2106,6 +2106,10 @@ MonoBehaviour:
   publico: {fileID: 1587422661}
   Gm: {fileID: 2002761973}
   globo: {fileID: 634525876}
+  slot1: {fileID: 982747242}
+  slot2: {fileID: 449681441}
+  slot3: {fileID: 294338088}
+  slot4: {fileID: 1217100155}
 --- !u!4 &666068664
 Transform:
   m_ObjectHideFlags: 0
@@ -3160,7 +3164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -24.54}
+  m_LocalPosition: {x: 0.36, y: 0, z: -24.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18771,7 +18775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 278.2441, y: -1.2516}
+  m_AnchoredPosition: {x: 204, y: -1.2516}
   m_SizeDelta: {x: 310.84, y: 87.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584729604
@@ -25001,7 +25005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -346, y: -55.915}
+  m_AnchoredPosition: {x: -436.7, y: -55.915}
   m_SizeDelta: {x: 412.0182, y: 111.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992545410
@@ -25263,7 +25267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barraTime: {fileID: 335582770}
   timerText: {fileID: 1172737377}
-  gameTime: 61
+  gameTime: 60
   conbinacion: {fileID: 666068663}
   laCombi: {fileID: 3212254337170055238, guid: cdd77a43236890942b208dcd7cfe4d21, type: 3}
   GameOverScreen: {fileID: 1394040372}
@@ -25477,18 +25481,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1394040370}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2002761975}
         m_TargetAssemblyTypeName: EscenasM, Assembly-CSharp
         m_MethodName: Restart
@@ -25909,7 +25901,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -628, y: -209}
+  m_AnchoredPosition: {x: -767.9, y: -209}
   m_SizeDelta: {x: 299.1321, y: 82.9077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104963531
