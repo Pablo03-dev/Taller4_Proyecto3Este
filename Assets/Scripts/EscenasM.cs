@@ -26,4 +26,10 @@ public class EscenasM : MonoBehaviour
     {
 
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1f;
+    }
 }
