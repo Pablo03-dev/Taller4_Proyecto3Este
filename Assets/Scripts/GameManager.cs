@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager manager;
 
     //public Slider barrahp;
+    private int score;
+    public TextMeshProUGUI scoreText;
+    public GameoverScreen GameOverScreen;
 
     public Slider barraTime;
 
@@ -24,8 +27,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         manager = this;
-    //    score = 0;
-    //    UpdatedScore();
+        score = 0;
+        UpdatedScore();
     }
 
     
@@ -33,17 +36,18 @@ public class GameManager : MonoBehaviour
    public void GameOver()
     {
         print("EndGame");
+        GameOverScreen.Setup(score);
     }
 
 
     void UpdatedScore()
     {
-        //scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score;
     }
 
     public void AddScore(int puntajesumaar)
     {
-        //score += puntajesumaar;
+        score += puntajesumaar;
         //Audiomanager.PlaySound("Coin");
         UpdatedScore();
     }
@@ -71,6 +75,7 @@ public class GameManager : MonoBehaviour
         if (time <= 0)
         {
             stopTimer = true;
+            GameOver();
 
         }
 

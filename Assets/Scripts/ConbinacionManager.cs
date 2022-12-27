@@ -98,6 +98,7 @@ public class ConbinacionManager : MonoBehaviour
         // resetear indiceSecuencia
         // apagar los slots
         // apagar los circulos
+        GameManager.manager.AddScore(50);
         GameManager.manager.completoSecuencia = true;
         print("Completo");
         Gm.gameTime = 7f;

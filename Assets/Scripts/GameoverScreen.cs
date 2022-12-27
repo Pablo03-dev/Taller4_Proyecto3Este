@@ -7,7 +7,7 @@ using TMPro;
 
 public class GameoverScreen : MonoBehaviour
 {
-    //public TMP_Text pointsText;
+    public TMP_Text pointsText;
     private bool juegoPausado;
 
 
@@ -16,9 +16,10 @@ public class GameoverScreen : MonoBehaviour
         juegoPausado = false;
     }
 
-    public void Setup(float time)
+    public void Setup(int score)
     {
         gameObject.SetActive(true);
+        pointsText.text = "Score: " + score.ToString();
 
         juegoPausado = true;
         Pausa();
@@ -39,7 +40,7 @@ public class GameoverScreen : MonoBehaviour
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1f;
     }
 }
