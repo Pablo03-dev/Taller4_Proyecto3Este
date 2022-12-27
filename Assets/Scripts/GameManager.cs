@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+        Time.timeScale = 1;
         gameTime = OriginTime;
         stopTimer = false;
         barraTime.maxValue = gameTime;

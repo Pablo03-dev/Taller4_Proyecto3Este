@@ -20,6 +20,7 @@ public class EscenasM : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1f;
     }
 
     public void Options()
@@ -31,5 +32,10 @@ public class EscenasM : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
 
+    }
+
+    public void BacktoMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
