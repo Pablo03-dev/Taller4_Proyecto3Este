@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if (gameTime >= 7)
+        if (gameTime >= 5)
         {
             gameTime = OriginTime;
         }
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
         if (completoSecuencia == true)
         {
-            gameTime += 7;
+            gameTime += 5;
             completoSecuencia = false;
         }
 
